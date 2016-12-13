@@ -24,11 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mascotas_favoritas);
+        setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-
-        listaMascotas = (RecyclerView)findViewById(R.id.rvMascotasFavoritas);
+       listaMascotas = (RecyclerView)findViewById(R.id.rvMascotas);
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -37,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         inicializarListaMascotas();
         inicializarAdaptador();
     }
+
+    public boolean onCreateOtionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        return super.onCreateOptionsMenu(menu);
+    }
+
     private void inicializarAdaptador(){
         adaptador = new MascotaAdaptador(mascotas, this);
         listaMascotas.setAdapter(adaptador);
