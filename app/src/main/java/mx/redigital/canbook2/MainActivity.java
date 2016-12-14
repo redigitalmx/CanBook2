@@ -30,8 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
        listaMascotas = (RecyclerView)findViewById(R.id.rvMascotas);
 
-       /* LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);*/
+       /*
+
+       LinearLayoutManager llm = new LinearLayoutManager(this);
+       llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+       */
+
         GridLayoutManager glm = new GridLayoutManager(this, 2);
 
 
@@ -40,7 +45,19 @@ public class MainActivity extends AppCompatActivity {
         inicializarAdaptador();
     }
 
-     private void inicializarAdaptador(){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void inicializarAdaptador(){
         adaptador = new MascotaAdaptador(mascotas, this);
         listaMascotas.setAdapter(adaptador);
     }

@@ -26,7 +26,8 @@
             android:id="@+id/imgHueso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dog_bone_50"/>
+            android:src="@drawable/dog_bone_50"
+            android:paddingLeft="15dp" />
 
        <TextView
             android:id="@+id/tvNombre"
@@ -34,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:text="@string/tv_nombre"
-            android:paddingLeft="5dp"/>
+            android:paddingLeft="15dp"/>
 
         <TextView
             android:id="@+id/tvRanking"
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tv_ranking"
             android:layout_gravity="center_vertical"
-            android:paddingLeft="180dp"/>
+            android:paddingLeft="15dp"/>
 
          <ImageView
             android:id="@+id/imgHueso2"
