@@ -1,5 +1,6 @@
 package mx.redigital.canbook2;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -52,14 +53,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        return super.onOptionsItemSelected(item);
+        Intent intent = new Intent(this, MascotasFavoritas.class);
+        startActivity(intent);
+        return true;
     }
 
     private void inicializarAdaptador(){
