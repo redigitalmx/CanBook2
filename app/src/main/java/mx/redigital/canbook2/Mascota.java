@@ -11,12 +11,10 @@ public class Mascota {
     private int foto;
     private int ranking;
 
-    ArrayList<Mascota> favorito = new ArrayList<Mascota>();
-
     public Mascota(String nombre, int foto, int ranking){
         this.nombre = nombre;
         this.foto= foto;
-        this.ranking= ranking;
+        this.ranking= 0;
     }
 
     public String getNombre(){
@@ -34,22 +32,10 @@ public class Mascota {
     public void setFoto(int foto){
         this.foto = foto;
     }
-    public int getRanking(){
-        return ranking;
-    }
-    public void setRanking(int ranking){
-        this.ranking = ranking + this.ranking;
-    }
 
-    public void mascotasFavoritas(String nombre, int foto, int ranking){
-        if(favorito.size()<5){
-            favorito.add(new Mascota(nombre, foto, ranking));
-        } else {
-            favorito.set(0,new Mascota(nombre, foto, ranking));
-        }
+    public int getRanking() {return ranking;}
 
-
-    }
+    public void setRanking(int ranking) {this.ranking = ranking;}
 
 
 }

@@ -6,7 +6,17 @@
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
     android:elevation="@dimen/elevacion_action_bar"
-    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" >
+    android:theme="@style/ThemeOverlay.AppCompat"
+    app:popupTheme="@style/ThemeOverlay.AppCompat"
+    app:titleTextColor="#FFFFFF">
+
+
+    <ImageButton
+        android:id="@+id/ibTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/christmas_star_50"
+        android:layout_margin="15dp" />
 
 </android.support.v7.widget.Toolbar>
